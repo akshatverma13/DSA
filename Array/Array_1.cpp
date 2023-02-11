@@ -78,3 +78,27 @@ int main(){
   cout<<countno1<<" "<<countno0;
 }
 
+#Unique element in array
+#include<bits/stdc++.h>
+using namespace std;
+int findunique(vector<int>arr){
+  for(int i=0;i<arr.size();i++)
+  {
+    int ans =0;
+    ans=ans^arr[i];
+  }
+  return ans ;
+}
+int main(){
+  int n;
+  cout<<"Enter the size of array "<<endl;
+  cin>>n;
+  vector<int>arr(n);
+  //takeing input
+  for(int i=0;i<arr.size();i++)
+  {
+    cin>>arr[i];
+
+  }
+  int uniqueelement=findunique(arr);
+  cout<<"Unique element is "<<uniqueelement;
