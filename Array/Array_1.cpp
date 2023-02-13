@@ -78,27 +78,84 @@ int main(){
   cout<<countno1<<" "<<countno0;
 }
 
-#Unique element in array
-#include<bits/stdc++.h>
+#Maximum number in array
+#include<iostream>
+#include<limits.h>
 using namespace std;
-int findunique(vector<int>arr){
-  for(int i=0;i<arr.size();i++)
+int main()
+{
+  int arr[]={1,2,3,4,5};
+  int size=5;
+  int maxi=INT_MIN;
+  for(int i=0;i<size;i++)
   {
-    int ans =0;
-    ans=ans^arr[i];
-  }
-  return ans ;
-}
-int main(){
-  int n;
-  cout<<"Enter the size of array "<<endl;
-  cin>>n;
-  vector<int>arr(n);
-  //takeing input
-  for(int i=0;i<arr.size();i++)
-  {
-    cin>>arr[i];
+    if(arr[i]>maxi)
+    maxi=arr[i];
 
   }
-  int uniqueelement=findunique(arr);
-  cout<<"Unique element is "<<uniqueelement;
+  cout<<"max element is "<<maxi<<endl;
+}
+
+#Minimum number in array
+#include<iostream>
+#include<limits.h>
+using namespace std;
+int main()
+{
+  int arr[]={1,2,3,4,5};
+  int size=5;
+  int min=INT_MAX;
+  for(int i=0;i<size;i++)
+  {
+    if(arr[i]<min)
+    min=arr[i];
+
+  }
+  cout<<"min element is "<<min<<endl;
+}
+
+# Print Extreme print in array
+#include<iostream>
+using namespace std;
+int main(){
+  int arr[]={1,2,3,4,5};
+  int size=5;
+  int start=0;
+  int end=size-1;
+  while(start<=end)
+  {
+    
+    if(start==end)
+    cout<<arr[start];
+    else{
+      cout<<arr[start]<<" ";
+      cout<<arr[end]<< " ";
+    }
+    start++;
+  end--;
+  }
+  
+}
+
+#Reverse an array
+#include<iostream>
+using namespace std;
+int main(){
+  int arr[]={1,2,3,4,5};
+  int size=5;
+  int start=0;
+  int end=size-1;
+  while(start<=end)
+  {
+      swap(arr[start],arr[end]);
+      start++;
+      end--;
+  }
+  for(int i=0;i<size;i++)
+  {
+      cout<<arr[i]<<" ";
+  }
+      
+
+  
+}
